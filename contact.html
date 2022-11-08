@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Globalization of Capital">
+<meta name="keywords" content="Globalization,Capital,International,Money">
+<meta name="author" content="Ryan Triplett and Michal McCaskle">
+<title>Share Your Thoughts</title>
+<script type="text/javascript" src="jscript.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+    <div id="bgBottom"></div>
+    <div id="container">
+        <div id="header"></div>
+        <div name="navContainer" id="navContainer">&nbsp;</div>
+        <div id="content">
+            <h1>What's Your Opinion?</h1>
+            Please share with us your opinion on the globalization of capital! You can email us at <a href="mailto:rstriplett@zonemail.clpccd.edu">rstriplett@zonemail.clpccd.edu</a>, OR fill out the form below:<br><br>
+            <form name="infoForm" id="infoForm" onsubmit="return formValidation();">
+                <div class="instructions">Fields with an asterisk (<span class="formAsterisk">*</span>) are required.</div>
+                <div id="formContainer"><div id="blockContainer">
+                    <div class="formRow">
+                        <div class="formLeftCol">First Name<span class="formAsterisk">*</span></div>
+                        <input name="contactFirstName" id="contactFirstName" class="formInput" type="text" placeholder="John"
+                            onFocus="showHint( this, 'Please enter your first name.', 4 );"
+                            onMouseOver="showHint( this, 'Please enter your first name.', 4 );"
+                            onKeyDown="showHint( this, 'Please enter your first name.', 4 );"
+                        />
+                    </div>
+                    <div class="formRow">
+                        <div class="formLeftCol">Last Name<span class="formAsterisk">*</span></div>
+                        <input name="contactLastName" id="contactLastName" class="formInput" type="text" placeholder="Doe"
+                            onFocus="showHint( this, 'Please enter your last name.', 4 );"
+                            onMouseOver="showHint( this, 'Please enter your last name.', 4 );"
+                            onKeyDown="showHint( this, 'Please enter your last name.', 4 );"
+                        />
+                    </div>
+                    <div class="formRow">
+                        <div class="formLeftCol">Email<span class="formAsterisk">*</span></div>
+                        <input name="contactEmail" id="contactEmail" class="formInput" type="text" placeholder="example@email.com"
+                            onFocus="showHint( this, 'Please enter your email address.', 4 );"
+                            onMouseOver="showHint( this, 'Please enter your email address.', 4 );"
+                            onKeyDown="showHint( this, 'Please enter your email address.', 4 );"
+                        />
+                    </div>
+                    <div class="formRow">
+                        <div class="formLeftCol">Phone</div>
+                        <input name="contactPhone" id="contactPhone" class="formInput" type="text" placeholder="(555) 555-1234"
+                            onFocus="showHint( this, 'Please enter your phone number.', 4 );"
+                            onMouseOver="showHint( this, 'Please enter your phone number.', 4 );"
+                            onKeyDown="showHint( this, 'Please enter your phone number.', 4 );"
+                        />
+                    </div>
+                </div></div>
+                <div name="messageContainer" id="messageContainer" class="formRow">
+                    <div name="message" id="message">Message</div>
+                        <textarea name="messageContent" id="messageContent" maxlength="1000" spellcheck="true" placeholder="Type your message here."
+                            onFocus="showHint( messageContainer, 'Please enter your message.', -55 );"
+                            onMouseOver="showHint( messageContainer, 'Please enter your message.', -55 );"
+                            onKeyDown="showHint( messageContainer, 'Please enter your message.', -55 );"
+                        ></textarea>
+                    </div>
+                <div id="errors"><div name="errorsBlock" id="errorsBlock"></div></div>
+                <div name="bottomButtonContainer" id="bottomButtonContainer">
+                <div id="submitContainer">
+                    <input name="submitButton" id="submitButton" type="submit" value="Submit!"
+                        onMouseOver="showHint( document.getElementById( 'submitButton' ), 'Submit the form!', 4 );"
+                        onFocus="showHint( document.getElementById( 'submitButton' ), 'Submit the form!', 4 );"
+                    />
+                    </div>
+                    <div name="clearButtonContainer" id="clearButtonContainer">
+                        <input name="clearButton" id="clearButton" type="button" value="Clear"
+                            onClick="clearAll(); showHint( document.getElementById( 'clearButton' ), 'Clear everything.', 4 );"
+                            onMouseOver="showHint( document.getElementById( 'clearButton' ), 'Clear everything.', 4 );"
+                            onFocus="showHint( document.getElementById( 'clearButton' ), 'Clear everything.', 4 );"
+                        />
+                    </div>
+                    <div name="fillButtonContainer" id="fillButtonContainer">
+                        <input name="fillButton" id="fillButton" type="button" value="Auto Fill"
+                            onClick="autoFill(); showHint( document.getElementById( 'fillButton' ), 'For the lazy.', 4 );"
+                            onMouseOver="showHint( document.getElementById( 'fillButton' ), 'For the lazy.', 4 );"
+                            onFocus="showHint( document.getElementById( 'fillButton' ), 'For the lazy.', 4 );"
+                        />
+                    </div>
+                </div>
+            </form>
+            <div name="hint" id="hint"></div>
+        </div>
+    <div id="copyright">&copy; Ryan Triplett &amp; Michal McCaskle 2015</div>
+    </div>
+</body>
+</html>
+
